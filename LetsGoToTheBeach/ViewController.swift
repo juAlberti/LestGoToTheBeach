@@ -19,8 +19,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         animationView!.animationSpeed = 0.8
+        
+        // MARK: Buttons visuals
+        findOutButton.layer.cornerRadius = 20
+        findOutButton.backgroundColor = UIColor(named: "Purple")
+        findOutButton.tintColor = .black
+        findOutButton.setTitle("Descubra", for: .normal)
         
     }
 
@@ -37,6 +42,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reloadButton(_ sender: Any) {
+        
     }
 }
 
