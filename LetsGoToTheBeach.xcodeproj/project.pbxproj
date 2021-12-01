@@ -13,6 +13,8 @@
 		07D636F627569F8400FC567F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D636F427569F8400FC567F /* Main.storyboard */; };
 		07D636F827569F8600FC567F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D636F727569F8600FC567F /* Assets.xcassets */; };
 		07D636FB27569F8600FC567F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D636F927569F8600FC567F /* LaunchScreen.storyboard */; };
+		16AC70FA2757E718007146BA /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 16AC70F92757E718007146BA /* weather.json */; };
+		5A407F493EA2F6B2EAD4D422 /* Pods_LetsGoToTheBeach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5BEC357392BB85BFEA39C5 /* Pods_LetsGoToTheBeach.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		07D636F727569F8600FC567F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07D636FA27569F8600FC567F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D636FC27569F8600FC567F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16AC70F92757E718007146BA /* weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weather.json; sourceTree = "<group>"; };
+		270AB9F7CF7600EA83526529 /* Pods-LetsGoToTheBeach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsGoToTheBeach.release.xcconfig"; path = "Target Support Files/Pods-LetsGoToTheBeach/Pods-LetsGoToTheBeach.release.xcconfig"; sourceTree = "<group>"; };
+		2D5BEC357392BB85BFEA39C5 /* Pods_LetsGoToTheBeach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsGoToTheBeach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA32339798809F361ADD4847 /* Pods-LetsGoToTheBeach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsGoToTheBeach.debug.xcconfig"; path = "Target Support Files/Pods-LetsGoToTheBeach/Pods-LetsGoToTheBeach.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A407F493EA2F6B2EAD4D422 /* Pods_LetsGoToTheBeach.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				07D636ED27569F8400FC567F /* LetsGoToTheBeach */,
 				07D636EC27569F8400FC567F /* Products */,
+				4031068AB1DB919691FCCF06 /* Pods */,
+				83A2F045AD17D56C615BD89B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +68,30 @@
 				07D636EE27569F8400FC567F /* AppDelegate.swift */,
 				07D636F027569F8400FC567F /* SceneDelegate.swift */,
 				07D636F227569F8400FC567F /* ViewController.swift */,
+				16AC70F92757E718007146BA /* weather.json */,
 				07D636F427569F8400FC567F /* Main.storyboard */,
 				07D636F727569F8600FC567F /* Assets.xcassets */,
 				07D636F927569F8600FC567F /* LaunchScreen.storyboard */,
 				07D636FC27569F8600FC567F /* Info.plist */,
 			);
 			path = LetsGoToTheBeach;
+			sourceTree = "<group>";
+		};
+		4031068AB1DB919691FCCF06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA32339798809F361ADD4847 /* Pods-LetsGoToTheBeach.debug.xcconfig */,
+				270AB9F7CF7600EA83526529 /* Pods-LetsGoToTheBeach.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		83A2F045AD17D56C615BD89B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D5BEC357392BB85BFEA39C5 /* Pods_LetsGoToTheBeach.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07D636FF27569F8600FC567F /* Build configuration list for PBXNativeTarget "LetsGoToTheBeach" */;
 			buildPhases = (
+				0B7A69683B31EE6088D8C5B1 /* [CP] Check Pods Manifest.lock */,
 				07D636E727569F8400FC567F /* Sources */,
 				07D636E827569F8400FC567F /* Frameworks */,
 				07D636E927569F8400FC567F /* Resources */,
+				3CA413C8B54618FE378E10BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AC70FA2757E718007146BA /* weather.json in Resources */,
 				07D636FB27569F8600FC567F /* LaunchScreen.storyboard in Resources */,
 				07D636F827569F8600FC567F /* Assets.xcassets in Resources */,
 				07D636F627569F8400FC567F /* Main.storyboard in Resources */,
@@ -132,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B7A69683B31EE6088D8C5B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LetsGoToTheBeach-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CA413C8B54618FE378E10BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LetsGoToTheBeach/Pods-LetsGoToTheBeach-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LetsGoToTheBeach/Pods-LetsGoToTheBeach-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LetsGoToTheBeach/Pods-LetsGoToTheBeach-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07D636E727569F8400FC567F /* Sources */ = {
@@ -284,6 +356,7 @@
 		};
 		07D6370027569F8600FC567F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA32339798809F361ADD4847 /* Pods-LetsGoToTheBeach.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +384,7 @@
 		};
 		07D6370127569F8600FC567F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 270AB9F7CF7600EA83526529 /* Pods-LetsGoToTheBeach.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
