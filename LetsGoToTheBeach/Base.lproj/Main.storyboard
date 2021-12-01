@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Fuv-T2-pmm">
-                                <rect key="frame" x="0.0" y="144" width="414" height="618"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fuv-T2-pmm">
+                                <rect key="frame" x="0.0" y="139" width="414" height="618"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="psT-De-wBB">
-                                        <rect key="frame" x="39" y="0.0" width="336" height="370"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="psT-De-wBB">
+                                        <rect key="frame" x="39" y="0.0" width="336" height="471"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixa-hF-UEn">
                                                 <rect key="frame" x="102.5" y="0.0" width="131" height="88"/>
@@ -30,7 +30,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNH-Zz-VZr" customClass="AnimationView" customModule="Lottie">
-                                                <rect key="frame" x="0.0" y="118" width="336" height="252"/>
+                                                <rect key="frame" x="0.0" y="88" width="336" height="383"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="weather"/>
@@ -38,8 +38,8 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m17-fs-Iu1">
-                                        <rect key="frame" x="100" y="430" width="214" height="188"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m17-fs-Iu1">
+                                        <rect key="frame" x="100" y="471" width="214" height="147"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vou para praia hoje?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHS-wj-IwV">
                                                 <rect key="frame" x="0.0" y="0.0" width="214" height="24.5"/>
@@ -48,9 +48,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfY-2x-J8t">
-                                                <rect key="frame" x="0.0" y="55" width="214" height="80"/>
+                                                <rect key="frame" x="0.0" y="34.5" width="214" height="80"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="214" id="BK5-kI-eBb"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="214" id="BK5-kI-eBb"/>
                                                     <constraint firstAttribute="height" constant="80" id="efa-73-MUW"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
@@ -62,7 +62,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJY-Vw-JJG">
-                                                <rect key="frame" x="0.0" y="165.5" width="214" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="124.5" width="214" height="22.5"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                                 <state key="normal" title="De novo" image="goforward" catalog="system">
                                                     <color key="titleColor" name="AccentColor"/>
@@ -80,9 +80,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fuv-T2-pmm" secondAttribute="trailing" id="6fs-FC-A6v"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fuv-T2-pmm" secondAttribute="bottom" constant="100" id="H1p-01-BVF"/>
+                            <constraint firstItem="Fuv-T2-pmm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GmR-h3-OFD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fuv-T2-pmm" secondAttribute="bottom" constant="50" id="H1p-01-BVF"/>
                             <constraint firstItem="Fuv-T2-pmm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qel-nE-bCP"/>
-                            <constraint firstItem="Fuv-T2-pmm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="sHx-eh-GI4"/>
+                            <constraint firstItem="Fuv-T2-pmm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="sHx-eh-GI4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -126,6 +127,9 @@
             <point key="canvasLocation" x="959" y="129"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="pNH-Zz-VZr"/>
+    </designables>
     <resources>
         <image name="goforward" catalog="system" width="121" height="128"/>
         <namedColor name="AccentColor">
