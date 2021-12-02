@@ -15,6 +15,9 @@
 		07D636FB27569F8600FC567F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D636F927569F8600FC567F /* LaunchScreen.storyboard */; };
 		16AC70FA2757E718007146BA /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 16AC70F92757E718007146BA /* weather.json */; };
 		5A407F493EA2F6B2EAD4D422 /* Pods_LetsGoToTheBeach.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5BEC357392BB85BFEA39C5 /* Pods_LetsGoToTheBeach.framework */; };
+		F1B7058D2759355600909F8A /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7058C2759355500909F8A /* CityTableViewCell.swift */; };
+		F1B7058F275936E000909F8A /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7058E275936E000909F8A /* CitiesViewController.swift */; };
+		F1B7059127593C0800909F8A /* OpenWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B7059027593C0800909F8A /* OpenWeatherAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		16AC70F92757E718007146BA /* weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weather.json; sourceTree = "<group>"; };
 		270AB9F7CF7600EA83526529 /* Pods-LetsGoToTheBeach.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsGoToTheBeach.release.xcconfig"; path = "Target Support Files/Pods-LetsGoToTheBeach/Pods-LetsGoToTheBeach.release.xcconfig"; sourceTree = "<group>"; };
 		2D5BEC357392BB85BFEA39C5 /* Pods_LetsGoToTheBeach.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsGoToTheBeach.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B7058C2759355500909F8A /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		F1B7058E275936E000909F8A /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		F1B7059027593C0800909F8A /* OpenWeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPI.swift; sourceTree = "<group>"; };
 		FA32339798809F361ADD4847 /* Pods-LetsGoToTheBeach.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsGoToTheBeach.debug.xcconfig"; path = "Target Support Files/Pods-LetsGoToTheBeach/Pods-LetsGoToTheBeach.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +76,9 @@
 				07D636F227569F8400FC567F /* ViewController.swift */,
 				16AC70F92757E718007146BA /* weather.json */,
 				07D636F427569F8400FC567F /* Main.storyboard */,
+				F1B7058E275936E000909F8A /* CitiesViewController.swift */,
+				F1B7059027593C0800909F8A /* OpenWeatherAPI.swift */,
+				F1B7058C2759355500909F8A /* CityTableViewCell.swift */,
 				07D636F727569F8600FC567F /* Assets.xcassets */,
 				07D636F927569F8600FC567F /* LaunchScreen.storyboard */,
 				07D636FC27569F8600FC567F /* Info.plist */,
@@ -211,8 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D636F327569F8400FC567F /* ViewController.swift in Sources */,
+				F1B7058F275936E000909F8A /* CitiesViewController.swift in Sources */,
 				07D636EF27569F8400FC567F /* AppDelegate.swift in Sources */,
+				F1B7058D2759355600909F8A /* CityTableViewCell.swift in Sources */,
 				07D636F127569F8400FC567F /* SceneDelegate.swift in Sources */,
+				F1B7059127593C0800909F8A /* OpenWeatherAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +374,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TA9GQL43ZA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LetsGoToTheBeach/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

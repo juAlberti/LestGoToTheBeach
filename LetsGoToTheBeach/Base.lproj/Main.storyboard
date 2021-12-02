@@ -98,45 +98,78 @@
             </objects>
             <point key="canvasLocation" x="96" y="129"/>
         </scene>
-        <!--View Controller-->
+        <!--Cities View Controller-->
         <scene sceneID="zX8-Sy-wKX">
             <objects>
-                <viewController id="Zp6-WL-WBJ" sceneMemberID="viewController">
+                <viewController id="Zp6-WL-WBJ" customClass="CitiesViewController" customModule="LetsGoToTheBeach" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UJQ-a3-fha">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="sCI-SP-LZ3">
-                                <rect key="frame" x="0.0" y="50" width="414" height="51"/>
+                                <rect key="frame" x="10" y="50" width="394" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jzQ-e3-hbA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jzQ-e3-hbA">
                                 <rect key="frame" x="0.0" y="101" width="414" height="707"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityCell" id="xdg-ei-m1l" customClass="CityTableViewCell" customModule="LetsGoToTheBeach" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="49.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xdg-ei-m1l" id="gqw-9Z-1II" customClass="CityTableViewCell" customModule="LetsGoToTheBeach" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQf-fG-i0M">
+                                                    <rect key="frame" x="20" y="11" width="334" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AQf-fG-i0M" firstAttribute="top" secondItem="gqw-9Z-1II" secondAttribute="topMargin" id="6K6-AT-B1O"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AQf-fG-i0M" secondAttribute="trailing" id="Arb-fH-pAz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="AQf-fG-i0M" secondAttribute="bottom" id="KhK-tW-xbP"/>
+                                                <constraint firstItem="AQf-fG-i0M" firstAttribute="leading" secondItem="gqw-9Z-1II" secondAttribute="leadingMargin" id="jsw-BQ-CQU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="AQf-fG-i0M" id="1Lt-zU-zSH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="zdK-IA-IJe">
+                                <rect key="frame" x="0.0" y="399" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Ib-Sj-yPn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sCI-SP-LZ3" firstAttribute="leading" secondItem="8Ib-Sj-yPn" secondAttribute="leading" id="0nt-4N-vhR"/>
+                            <constraint firstItem="sCI-SP-LZ3" firstAttribute="leading" secondItem="8Ib-Sj-yPn" secondAttribute="leading" constant="10" id="0nt-4N-vhR"/>
                             <constraint firstItem="jzQ-e3-hbA" firstAttribute="leading" secondItem="8Ib-Sj-yPn" secondAttribute="leading" id="99N-I3-vhD"/>
                             <constraint firstItem="sCI-SP-LZ3" firstAttribute="top" secondItem="8Ib-Sj-yPn" secondAttribute="top" constant="50" id="EdZ-94-u7V"/>
                             <constraint firstItem="jzQ-e3-hbA" firstAttribute="top" secondItem="sCI-SP-LZ3" secondAttribute="bottom" id="RSz-LU-B93"/>
                             <constraint firstItem="jzQ-e3-hbA" firstAttribute="top" secondItem="sCI-SP-LZ3" secondAttribute="bottom" id="Uo3-Mw-xgF"/>
                             <constraint firstItem="8Ib-Sj-yPn" firstAttribute="bottom" secondItem="jzQ-e3-hbA" secondAttribute="bottom" id="WI8-Zv-CHK"/>
+                            <constraint firstItem="zdK-IA-IJe" firstAttribute="centerX" secondItem="jzQ-e3-hbA" secondAttribute="centerX" id="diG-eu-2WA"/>
                             <constraint firstItem="8Ib-Sj-yPn" firstAttribute="trailing" secondItem="jzQ-e3-hbA" secondAttribute="trailing" id="qRw-i9-bBj"/>
-                            <constraint firstItem="sCI-SP-LZ3" firstAttribute="trailing" secondItem="8Ib-Sj-yPn" secondAttribute="trailing" id="xb2-75-e9O"/>
+                            <constraint firstItem="sCI-SP-LZ3" firstAttribute="trailing" secondItem="8Ib-Sj-yPn" secondAttribute="trailing" constant="-10" id="xb2-75-e9O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="zdK-IA-IJe" id="nhS-Ha-B4G"/>
+                        <outlet property="searchBar" destination="sCI-SP-LZ3" id="lXc-z5-KmJ"/>
+                        <outlet property="tableView" destination="jzQ-e3-hbA" id="beH-YZ-vba"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMd-Bk-mbG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959" y="129"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="pNH-Zz-VZr"/>
-    </designables>
     <resources>
         <image name="goforward" catalog="system" width="121" height="128"/>
         <namedColor name="AccentColor">
